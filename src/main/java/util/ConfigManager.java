@@ -105,11 +105,11 @@ public class ConfigManager {
 	 * Gets the general file path where all the files are located
 	 * @return
 	 */
-	public static String getFilePath() {
+	public static String getOntologyPath() {
 		if(filePath != null){
 			return filePath;
 		}
-		String filePath = loadConfig().getProperty(URI_NAMESPACE + "path");
+		String filePath = loadConfig().getProperty(URI_NAMESPACE + "ontology");
 		return filePath;
 	}
 	
@@ -117,27 +117,10 @@ public class ConfigManager {
 	 * Gets the general file path where all the files for the SPARQL queries are located
 	 * @return
 	 */
-	public static String getQueriesPath() {
-		String filePath = loadConfig().getProperty(URI_NAMESPACE + "queriesPath");
+	public static String getCSVPath() {
+		String filePath = loadConfig().getProperty(URI_NAMESPACE + "csv");
 		return filePath;
 	}
 	
-	/**
-	 * Gets the general file path where all the files are located
-	 * @return
-	 */
-	public static String getOntoURIPath() {
-		String filePath = loadConfig().getProperty(URI_NAMESPACE + "URI");
-		return filePath;
-	}
-
-	/**
-	 * Gets the general file path where for the html template
-	 * @return
-	 */
-	public static String getTemplatePath() {
-		String filePath = loadConfig().getProperty(URI_NAMESPACE + "templatesPath");
-		return filePath;
-	}
 	
 }
