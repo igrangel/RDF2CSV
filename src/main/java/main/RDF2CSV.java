@@ -16,7 +16,7 @@ import util.ConfigManager;
 import util.StringUtil;
 
 /**
- * Main class of the ShaefflerPEPMain project
+ * Main class of the RDF2CSV project
  * @author Irlan
  */
 
